@@ -17,9 +17,9 @@
 
 This repository contains the final projects carried out in the SkillFactory school:
 
-module_0 - Guess the number!
-module_1 - Who wants to become a millionaire?
-module_2 - Exploratory Data Analysis (EDA).
-mjdule_3 - Project "About tasty and healthy food".
+- module_0 - Guess the number!
+- module_1 - Who wants to become a millionaire?
+- module_2 - Exploratory Data Analysis (EDA).
+- mjdule_3 - Project "About tasty and healthy food".
 
 Content is under construction.
