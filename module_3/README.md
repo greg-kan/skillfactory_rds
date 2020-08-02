@@ -1,5 +1,5 @@
 # skillfactory_rds  
-module_2  
+module_3  
 
 ## Разведывательный анализ данных (Exploratory Data Analysis, EDA)
 
