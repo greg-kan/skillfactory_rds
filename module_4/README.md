@@ -5,7 +5,7 @@
 
 ## Оглавление  
 [1. Описание модуля](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Описание-модуля)  
-[2. Какой кейс решаем?](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Какой-кейс-решаем?)  
+[2. Какой кейс решаем?](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#какой-кейс-решаем)  
 [3. Краткая информация о данных](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Краткая-информация-о-данных)  
 [3. Этапы работы над проектом](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Этапы-работы-над-проектом)  
 [4. Результат](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Результат)  
