@@ -85,7 +85,12 @@ def get_boxplot(df, column, target):
     ax.set_title('Boxplot for ' + column)
     plt.show() 
 
-def display_roc_auc(d_y_true, d_y_pred_proba):
+def display_roc_auc(d_y_true, d_y_pred_proba, d_font_scale):
+
+    plt.style.use('seaborn-paper')
+    sns.set(font_scale=d_font_scale)
+    color_text = plt.get_cmap('PuBu')(0.85)
+
     '''Строит ROC - кривую
        Параметры:
        - d_y_true - истинный значения
@@ -119,7 +124,7 @@ def display_confusion_matrix(d_y_true, d_y_pred):
     conf_mat = confusion_matrix(d_y_true, d_y_pred).T
     class_names = ['Good', 'Defaulted']
     df_cm = pd.DataFrame(conf_mat, index=class_names, columns=class_names)
-    plt.figure(figsize = (10,7))
+    plt.figure(figsize = (7,5))
     sns.heatmap(df_cm, annot=True, fmt="d");    
 
 def display_PR_curve(d_y_true, d_y_pred_proba, d_font_scale):
@@ -176,7 +181,7 @@ def cross_val_score_visualize(d_name_metric, d_vec, d_value_metric, d_font_scale
     y_max = max(avg_metric_train,avg_metric_test) + 1.5*max(std_metric_train,std_metric_test)
     y_min = min(avg_metric_train,avg_metric_test) - 3*max(std_metric_train,std_metric_test)
     plt.ylim([y_min, y_max])
-    plt.xlabel('номер фолда', fontsize=15, color = color_text)
+    plt.xlabel('Номер фолда', fontsize=15, color = color_text)
     plt.ylabel(d_name_metric, fontsize=15, color = color_text)
     plt.title(f'Кросс-валидация по метрике {d_name_metric} на {num_folds} фолдах', color = color_text, fontsize=17)
     plt.legend(loc="lower right", fontsize=11)
