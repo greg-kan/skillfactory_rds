@@ -53,6 +53,7 @@
 - region_rating - рейтинг региона  
 - app_date - дата подачи заявки  
 - default	- наличие дефолта  
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Этапы работы над проектом  
