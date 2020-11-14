@@ -27,6 +27,7 @@
 
 **Метрика качества:**
 Результаты оцениваются по площади под кривой ROC AUC
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Краткая информация о данных
@@ -52,12 +53,22 @@
 - region_rating - рейтинг региона  
 - app_date - дата подачи заявки  
 - default	- наличие дефолта  
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Этапы работы над проектом  
-- 
+- 1. Загрузка данных и предварительный анализ
+- 2. Анализ переменных
+- 3. Подготовка данных к использованию в моделе
+- 4. Построение модели
+- 5. Метрики качества
+- 6. Подбор гиперпараметров
+- 7. Submission
+- 8. Итоги
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Результат  
+ROC-AUC on Caggle: 0.73646
 
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
