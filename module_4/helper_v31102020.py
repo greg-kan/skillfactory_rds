@@ -190,7 +190,23 @@ def cross_val_score_visualize(d_name_metric, d_vec, d_value_metric, d_font_scale
     y_min_text = y_min +0.5*max(std_metric_train,std_metric_test)
     plt.text(0, y_min_text, f'{d_name_metric} на трейне = {round(avg_metric_train,3)} +/- {round(std_metric_train,3)} \n{d_name_metric} на тесте    = {round(avg_metric_test,3)} +/- {round(std_metric_test,3)} \n{d_name_metric} до CV        = {round(d_value_metric,3)}', fontsize = 15)
     plt.show()
-    return    
+    return  
+
+def model_coef(d_columns, d_model_coef_0):
+    '''Печатает коэффициенты при признаках в логистической регрессии
+       Параметры:
+       - d_columns - столбцы
+       - d_model_coef_0 - коэффициенты'''
+    temp_dict = {}
+    temp_dict['имя признака'] = d_columns
+    temp_dict['коэффициент модели'] = d_model_coef_0
+    temp_dict['модуль коэф'] = abs(temp_dict['коэффициент модели'])
+    temp_df = pd.DataFrame.from_dict(temp_dict, orient='columns')
+    temp_df = temp_df.sort_values(by='модуль коэф', ascending=False)
+    temp_df.reset_index(drop=True,inplace=True)
+    
+    return temp_df.loc[:,['имя признака','коэффициент модели']]
+
 
 if __name__ == "__main__":
     print('This is the Main program')
