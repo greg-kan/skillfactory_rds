@@ -63,10 +63,10 @@
 - 6. Подбор гиперпараметров
 - 7. Submission
 - 8. Итоги
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Результат  
 ROC-AUC on Caggle: 0.73646
-
 
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
