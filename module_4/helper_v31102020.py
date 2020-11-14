@@ -112,7 +112,8 @@ def print_confusion_matrix(d_y_true, d_y_pred):
        Параметры:
        - d_y_true - истинный значения
        - d_y_pred - предсказанные значения'''    
-    conf_mat = confusion_matrix(d_y_true, d_y_pred).T
+    conf_mat = confusion_matrix(d_y_true, d_y_pred)
+    conf_mat[0,0], conf_mat[1,1] = conf_mat[1,1], conf_mat[0,0]
     print('Confusion matrix:\n{}'.format(conf_mat))  
     print('Размер тестовой выборки:', conf_mat[0,0]+conf_mat[0,1]+conf_mat[1,0]+conf_mat[1,1])   
 
@@ -121,8 +122,9 @@ def display_confusion_matrix(d_y_true, d_y_pred):
        Параметры:
        - d_y_true - истинный значения
        - d_y_pred - предсказанные значения'''    
-    conf_mat = confusion_matrix(d_y_true, d_y_pred).T
-    class_names = ['Good', 'Defaulted']
+    conf_mat = confusion_matrix(d_y_true, d_y_pred)
+    conf_mat[0,0], conf_mat[1,1] = conf_mat[1,1], conf_mat[0,0]
+    class_names = ['Defaulted', 'Not Defaulted']
     df_cm = pd.DataFrame(conf_mat, index=class_names, columns=class_names)
     plt.figure(figsize = (7,5))
     sns.heatmap(df_cm, annot=True, fmt="d");    
@@ -189,7 +191,6 @@ def cross_val_score_visualize(d_name_metric, d_vec, d_value_metric, d_font_scale
     plt.text(0, y_min_text, f'{d_name_metric} на трейне = {round(avg_metric_train,3)} +/- {round(std_metric_train,3)} \n{d_name_metric} на тесте    = {round(avg_metric_test,3)} +/- {round(std_metric_test,3)} \n{d_name_metric} до CV        = {round(d_value_metric,3)}', fontsize = 15)
     plt.show()
     return    
-
 
 if __name__ == "__main__":
     print('This is the Main program')
