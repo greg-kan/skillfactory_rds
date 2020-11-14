@@ -27,6 +27,7 @@
 
 **Метрика качества:**
 Результаты оцениваются по площади под кривой ROC AUC
+
 :arrow_up:[к оглавлению](https://github.com/greg-kan/skillfactory_rds/blob/master/module_4/README.md#Оглавление)
 
 ### Краткая информация о данных
